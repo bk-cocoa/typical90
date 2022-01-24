@@ -5,7 +5,7 @@ Q = int(input())
 
 que = deque()
 
-for i in range(Q):
+for _ in range(Q):
     t, x = map(int, input().split())
     if t == 1:
         que.appendleft(x)

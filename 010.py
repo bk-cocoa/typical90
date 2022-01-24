@@ -23,8 +23,7 @@ for i in range(N):
     accum2_L.append(accum2_L[-1]+P2_L[i])
 
 # クエリ部分
-Q = int(input())
-for i in range(Q):
+for _ in range(int(input())):
 
     # 1組累積和、2組累積和から欲しい部分を抜き出して解答
     L,R = map(int,input().split())
