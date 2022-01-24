@@ -1,13 +1,11 @@
 # 入力
-N8, K = map(str, input().split())
-
+N8, K = input().split()
 
 # 10進数を、b進数に変換するための関数
 def base10to(n, b):
     if n // b:
         return base10to(n // b, b) + str(n % b)
     return str(n % b)
-
 
 # 一旦10進数に直してから9進数に変換する
 for i in range(int(K)):

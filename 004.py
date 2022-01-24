@@ -1,16 +1,14 @@
 # 入力
 H, W = map(int, input().split())
-L = []
-row_sum_L = [0] * H
-col_sum_L = [0] * W
 
+row_sum_L, col_sum_L = [0] * H, [0] * W
+L = []
 for row in range(H):
-    tmp_L = list(map(int, input().split()))
-    L.append(tmp_L)
+    L.append(list(map(int, input().split())))
     # 入力しながら行毎の合計、列毎の合計を取っていって…
-    row_sum_L[row] = sum(tmp_L)
+    row_sum_L[row] = sum(L[-1])
     for col in range(W):
-        col_sum_L[col] += tmp_L[col]
+        col_sum_L[col] += L[-1][col]
 
 # 行の合計 + 列の合計 - マスの値 = 答え
 for row in range(H):
