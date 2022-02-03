@@ -4,9 +4,8 @@ from collections import deque
 # 入力
 N = int(input())
 root_d = defaultdict(set)
-for i in range(N - 1):
-    A, B = map(int, input().split())
-    A, B = A - 1, B - 1
+for _ in range(N - 1):
+    A, B = map(lambda x: int(x) - 1, input().split())
     root_d[A].add(B)
     root_d[B].add(A)
 
