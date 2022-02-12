@@ -36,3 +36,6 @@ while r - l > 1:
         r = mid
 
 print(l)
+
+
+
