@@ -183,6 +183,11 @@
 * dequeを使ってappendとappendleftで上下を表現
 * dequeもスライスで欲しい位置の要素が取得可能なので、問題無し
 
+## 063 - Monochromatic Subgrid（★4）
+* 面倒くさそうに見えての実は全探索系
+* for else初めて実践で使った。へへへ。
+* bit全探索も久しぶりにやったー。できた。よかった。
+
 ## 064 - Uplift（★3）
 
 * 解説AC。悔しい。
