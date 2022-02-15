@@ -43,7 +43,7 @@ for start_H in range(1, H + 1):
 
                 road_s = copy.copy(now_road_s)
                 if (next_H, next_W) == (start_H, start_W) and 3 <= len(road_s):
-                    ans = max(ans,len(road_s))
+                    ans = max(ans, len(road_s))
                     continue
 
                 if (next_H, next_W) in road_s:
@@ -52,9 +52,7 @@ for start_H in range(1, H + 1):
                 if glid_L[next_H][next_W] == '#':
                     continue
 
-
-                road_s.add((next_H,next_W))
-                que.append((next_H,next_W,road_s))
-
+                road_s.add((next_H, next_W))
+                que.append((next_H, next_W, road_s))
 
 print(ans)
