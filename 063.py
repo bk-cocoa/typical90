@@ -20,7 +20,6 @@ for i in range(1, 2 ** H):
     row_cnt = len(check_L)
     ng_flg = True
     for w in range(W):
-
         check_num = check_L[0][w]
         if row_cnt == 1:
             cnt_d[check_num] += row_cnt
@@ -32,8 +31,8 @@ for i in range(1, 2 ** H):
         else:
             cnt_d[check_num] += row_cnt
 
-    if len(cnt_d) == 0:
-        continue
-    max_v = max(cnt_d.values())
-    ans = max(max_v, ans)
+    if len(cnt_d):
+        max_v = max(cnt_d.values())
+        ans = max(max_v, ans)
+
 print(ans)

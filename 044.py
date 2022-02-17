@@ -8,7 +8,7 @@ A_L = list(map(int, input().split()))
 que = deque(A_L)
 
 # Q回クエリをぶんなぐる
-for i in range(Q):
+for _ in range(Q):
 
     # クエリ受け取って
     t, x, y = map(int, input().split())

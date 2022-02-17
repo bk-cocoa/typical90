@@ -1,8 +1,9 @@
 from collections import defaultdict
+
 # 入力
 N, K = map(int, input().split())
 
-def push_a(x):
+def push_a(x: int) -> int:
     return (x + sum(map(int, list(str(x))))) % (10 ** 5)
 
 # N=0なら何回押しても0
@@ -12,7 +13,7 @@ if N == 0:
 
 # Kが大きくないなら、直接回してしまえホトトギス
 if K < 10**6:
-    for i in range(K):
+    for _ in range(K):
         N = push_a(N)
     print(N)
     exit()
@@ -31,7 +32,9 @@ while True:
 # ループを減らしたい
 # ループに入るまでの数＝checked_d[N]
 # 10**6回数のループを3回くらいマージンで回すつもりの計算
-K = K - (K // loop_cnt-3)*loop_cnt - checked_d[N]
-for i in range(K):
+K -= (K // loop_cnt-3) * loop_cnt + checked_d[N]
+
+for _ in range(K):
     N = push_a(N)
+
 print(N)
